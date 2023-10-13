@@ -23,7 +23,7 @@ public class Caneta {
         if (this.tampada == true){
             System.out.println("ERRO! Não posso rabiscar");
         } else {
-            System.out.println("Estou rabiscando");
+            System.out.println("Estou rabiscando ");
         }
     }
     

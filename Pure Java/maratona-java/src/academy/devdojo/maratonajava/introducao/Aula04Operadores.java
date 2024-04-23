@@ -8,5 +8,14 @@ public class Aula04Operadores {
         double resultado2 = numero01 /(double) numero02;
         System.out.println("Valor "+resultado);
         System.out.println(resultado2);
+
+        //%
+        int resto = 20 % 2;
+        System.out.println(resto);
+
+        //< > <= >= == !=
+
+        boolean isDezMaiorQueVinte = 10 > 20;
+        System.out.println("Dez é maior que vinte? "+isDezMaiorQueVinte);
     }
 }

@@ -10,39 +10,48 @@ public class ContaBanco {
         setStatus(false);
     }
 
+    public void estadoAtual(){
+        System.out.println("-----------------------------");
+        System.out.println("Número da conta: " + this.getNumConta());
+        System.out.println("Tipo de conta: " + this.getTipo());
+        System.out.println("Dono: " + this.getDono());
+        System.out.println("Saldo: " + this.getSaldo());
+        System.out.println("Status:" + this.getStatus());
+    }
+
     public void abrirConta(String tipo){
         setTipo(tipo);
         setStatus(true);
-        if(getTipo().equals("CC")) {
+        if(this.getTipo().equals("CC")) {
             setSaldo(50);
-        } else if (getTipo().equals("CP")) {
+        } else if (this.getTipo().equals("CP")) {
             setSaldo(150);
         }
     }
 
     public void fecharConta(){
-        if (getSaldo() > 0){
-            System.out.println("A conta não pode ser fechada, pois ainda tem R$ " + getSaldo());
-        } else if(getSaldo() < 0){
-            System.out.println("A conta não pode ser fechada, pois voce possui uma divida de R$"+ getSaldo());
+        if (this.getSaldo() > 0){
+            System.out.println("A conta não pode ser fechada, pois ainda tem R$ " + this.getSaldo());
+        } else if(this.getSaldo() < 0){
+            System.out.println("A conta não pode ser fechada, pois voce possui uma divida de R$"+ this.getSaldo());
         } else{
             setStatus(false);
-            System.out.println("A conta " + getNumConta() + " foi fechada com sucesso.");
+            System.out.println("A conta " + this.getNumConta() + " foi fechada com sucesso.");
         }
     }
 
     public void depositar(float valor){
-        if(getStatus()){
-            setSaldo(getSaldo() + valor);
+        if(this.getStatus()){
+            setSaldo(this.getSaldo() + valor);
         } else{
             System.out.println("É impossível depositar");
         }
     }
 
     public void sacar(float valor){
-        if (getStatus()){
-            if(getSaldo() > valor){
-                setSaldo(getSaldo() - valor);
+        if (this.getStatus()){
+            if(this.getSaldo() > valor){
+                setSaldo(this.getSaldo() - valor);
             }else {
                 System.out.println("É impossível sacar, pois voce não possui saldo suficiente");
             }
@@ -53,15 +62,15 @@ public class ContaBanco {
 
     public void pagarMensal(){
         float valor = 0;
-        if (getTipo().equals("CC")) {
+        if (this.getTipo().equals("CC")) {
             valor = 12;
-        } else if (getTipo().equals("CP")) {
+        } else if (this.getTipo().equals("CP")) {
             valor = 20;
         }
 
-        if(getStatus()){
-            if(getSaldo() > valor){
-                setSaldo(getSaldo() - valor);
+        if(this.getStatus()){
+            if(this.getSaldo() > valor){
+                setSaldo(this.getSaldo() - valor);
             }else {
                 System.out.println("Saldo insuficiente");
             }

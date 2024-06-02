@@ -10,16 +10,13 @@ public class Main {
         Canguru c = new Canguru();
         Cachorro k = new Cachorro();
 
-        c.setPeso(55.30f);
-        c.setIdade(3);
-        c.setMenbro(4);
-        c.usarBolsa();
-        c.locomover();
-        m.setPeso(85.3f);
-        m.setIdade(2);
-        m.setMenbro(4);
-        m.locomover();
-        m.alimentar();
-        m.emitirSom();
+        k.reagir("Olá");
+        k.reagir("Vai apanhar");
+        k.reagir(11,45);
+        k.reagir(21,00);
+        k.reagir(true);
+        k.reagir(false);
+        k.reagir(2, 12.5f);
+        k.reagir(17, 4.5f);
     }
 }

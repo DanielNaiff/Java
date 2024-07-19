@@ -3,7 +3,7 @@ package academy.devdojo.maratonajava.javacore.Fmodificadoresestatico.domain;
 public class Carro {
     private String nome;
     private double velocidadeMaxima;
-    private static double getVelocidadeLimite = 250;
+    private static double velocidadeLimite = 250;
 
     public Carro(String nome, double velocidadeMaxima) {
         this.nome = nome;
@@ -14,7 +14,15 @@ public class Carro {
         System.out.println("----------------");
         System.out.println("Nome "+this.getNome());
         System.out.println("Velocidade maxima "+this.getVelocidadeMaxima());
-        System.out.println("Velocidade limite "+this.getVelocidadeLimite);
+        System.out.println("Velocidade limite "+ Carro.velocidadeLimite);
+    }
+
+    public static void setVelocidadeLimite(double velocidadeLimite){
+        Carro.velocidadeLimite = velocidadeLimite;
+    }
+
+    public static double getVelocidadeLimite(){
+        return Carro.velocidadeLimite;
     }
 
     public String getNome() {
@@ -33,11 +41,4 @@ public class Carro {
         this.velocidadeMaxima = velocidadeMaxima;
     }
 
-    public double getGetVelocidadeLimite() {
-        return getVelocidadeLimite;
-    }
-
-    public void setGetVelocidadeLimite(double getVelocidadeLimite) {
-        this.getVelocidadeLimite = getVelocidadeLimite;
-    }
 }

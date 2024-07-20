@@ -16,7 +16,7 @@ public class ExceptionTest02 {
         } catch (IOException e) {
             //nunca deixar esse bloco vazio e nunca colocar regra de negocio, pois o catch serve apenas para avisar
             e.printStackTrace();
-            throw new RuntimeException("Problema a hroa de crair arquivo");
+            throw e;
     }
 }
 }

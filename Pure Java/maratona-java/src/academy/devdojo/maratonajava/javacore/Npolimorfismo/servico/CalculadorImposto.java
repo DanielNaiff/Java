@@ -1,24 +1,17 @@
 package academy.devdojo.maratonajava.javacore.Npolimorfismo.servico;
 
 import academy.devdojo.maratonajava.javacore.Npolimorfismo.domain.Computador;
+import academy.devdojo.maratonajava.javacore.Npolimorfismo.domain.Produto;
 import academy.devdojo.maratonajava.javacore.Npolimorfismo.domain.Tomate;
 
 import java.util.Comparator;
 
 public class CalculadorImposto {
-    public static void calcularImpostoComputador(Computador computador){
-        System.out.println("Relatorio de imposto do computador");
-        double imposto = computador.calcularImposto();
-        System.out.println("IMposto do computador" +computador.getNome());
-        System.out.println("valor " +computador.getValor());
-        System.out.println("IMposto a ser pago " + imposto);
-    }
-
-    public static void calcularImpostoTomate(Tomate tomate){
-        System.out.println("Relatorio de imposto do tomate");
-        double imposto = tomate.calcularImposto();
-        System.out.println("IMposto do tomate" +tomate.getNome());
-        System.out.println("valor " +tomate.getValor());
-        System.out.println("IMposto a ser pago " + imposto);
+    public static void calcularImposto(Produto produto){
+        System.out.println("Relatorio de imposto: ");
+        double imposto = produto.calcularImposto();
+        System.out.println("Produto: " + produto.getNome());
+        System.out.println("Preco: " + produto.getValor());
+        System.out.println("IMposto: " + imposto);
     }
 }

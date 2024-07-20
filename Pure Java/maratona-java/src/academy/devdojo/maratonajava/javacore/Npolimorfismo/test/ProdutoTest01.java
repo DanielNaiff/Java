@@ -13,6 +13,8 @@ public class ProdutoTest01 {
         Tomate tomate = new Tomate("Tomate siciliando", 10);
         Televisao tv = new Televisao("Samsung 50\"", 5000);
 
+
+        System.out.println("-=-=-=-=-=-=-=-=-=-");
         CalculadorImposto.calcularImposto(tomate);
         System.out.println("-=-=-=-=-=-=-=-=-=-");
         CalculadorImposto.calcularImposto(computador);

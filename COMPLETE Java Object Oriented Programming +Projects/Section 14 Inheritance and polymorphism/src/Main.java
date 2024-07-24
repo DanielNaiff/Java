@@ -3,11 +3,16 @@ import entities.BusinessAccount;
 import entities.SavingAccount;
 
 import java.util.ArrayList;
+import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        List<Account> list = new ArrayList<>();
+
+        list.add(new SavingAccount(1001, "Alex", 500.00, 0.01));
+        list.add(new BusinessAccount(1002,"Maria", 1000.0, 400.0));
         BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500.0);
 //UPCASTING
         Account acc1 = bacc;
@@ -30,9 +35,6 @@ public class Main {
         System.out.println("Update!");
     }
 
-    List<Account> list = new ArrayList<>();
 
-    list.add(new SavingAccount(1001, "Alex", 500.00, 0.01));
-    list.add(new BusinessAccount(1002,"Maria", 1000.0, 400.0));
     }
 }

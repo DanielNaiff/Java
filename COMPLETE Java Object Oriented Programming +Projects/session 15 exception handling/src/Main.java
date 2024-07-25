@@ -5,6 +5,21 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+        method1();
+
+        System.out.println("End of program");
+
+    }
+
+    public static void method1(){
+        System.out.println("***METHOD1 START***");
+        method2();
+        System.out.println("***METHOD1 END***");
+    }
+
+    public static void method2(){
+        System.out.println("***METHOD2 START***");
         Scanner sc = new Scanner(System.in);
 
         try{
@@ -16,10 +31,7 @@ public class Main {
         } catch (InputMismatchException e){
             System.out.println(e);
         }
-
-
-        System.out.println("Fim do programa");
-
         sc.close();
+        System.out.println("***METHOD2 END***");
     }
 }

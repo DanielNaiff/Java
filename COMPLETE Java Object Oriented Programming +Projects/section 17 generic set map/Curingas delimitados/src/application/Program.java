@@ -32,7 +32,10 @@ public class Program {
     }
 
     public static void copy(List<? extends Number> source, List<? super Number> destiny) {
+        //a lista source e um caso de covarianca, entao e possivel acessar os elementos
         for(Number number : source) {
+
+            //destiny e um caso de contravarianca, entao e possivel adicionar os elementos
             destiny.add(number);
         }
     }
